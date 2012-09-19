@@ -29,12 +29,12 @@
 		556EBFB7160A79CA00CC42E9 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 556EBF87160A79CA00CC42E9 /* CoreData.framework */; };
 		556EBFBF160A79CA00CC42E9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 556EBFBD160A79CA00CC42E9 /* InfoPlist.strings */; };
 		556EBFC2160A79CA00CC42E9 /* PennySketchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 556EBFC1160A79CA00CC42E9 /* PennySketchTests.m */; };
-		55E45D77160A83B600D34B6D /* PSStackedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55E45D6B160A83B600D34B6D /* PSStackedViewController.m */; };
-		55E45D78160A83B600D34B6D /* PSStackedViewGlobal.m in Sources */ = {isa = PBXBuildFile; fileRef = 55E45D6E160A83B600D34B6D /* PSStackedViewGlobal.m */; };
-		55E45D79160A83B600D34B6D /* PSStackedViewSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 55E45D70160A83B600D34B6D /* PSStackedViewSegue.m */; };
-		55E45D7A160A83B600D34B6D /* PSSVContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 55E45D72160A83B600D34B6D /* PSSVContainerView.m */; };
-		55E45D7B160A83B600D34B6D /* UIView+PSSizes.m in Sources */ = {isa = PBXBuildFile; fileRef = 55E45D74160A83B600D34B6D /* UIView+PSSizes.m */; };
-		55E45D7C160A83B600D34B6D /* UIViewController+PSStackedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 55E45D76160A83B600D34B6D /* UIViewController+PSStackedView.m */; };
+		55E45D77160A83B600D34B6D /* PSStackedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55E45D6B160A83B600D34B6D /* PSStackedViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		55E45D78160A83B600D34B6D /* PSStackedViewGlobal.m in Sources */ = {isa = PBXBuildFile; fileRef = 55E45D6E160A83B600D34B6D /* PSStackedViewGlobal.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		55E45D79160A83B600D34B6D /* PSStackedViewSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 55E45D70160A83B600D34B6D /* PSStackedViewSegue.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		55E45D7A160A83B600D34B6D /* PSSVContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 55E45D72160A83B600D34B6D /* PSSVContainerView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		55E45D7B160A83B600D34B6D /* UIView+PSSizes.m in Sources */ = {isa = PBXBuildFile; fileRef = 55E45D74160A83B600D34B6D /* UIView+PSSizes.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		55E45D7C160A83B600D34B6D /* UIViewController+PSStackedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 55E45D76160A83B600D34B6D /* UIViewController+PSStackedView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		55E45D7E160A83D000D34B6D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55E45D7D160A83D000D34B6D /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 

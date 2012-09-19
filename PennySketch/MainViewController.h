@@ -1,21 +1,19 @@
 //
-//  MainViewController.h
-//  PennySketch
+//  ExampleMenuRootController.h
+//  PSStackedViewExample
 //
-//  Created by slim on 9/19/12.
-//  Copyright (c) 2012 Sarcasm. All rights reserved.
+//  Created by Peter Steinberger on 7/18/11.
+//  Copyright 2011 Peter Steinberger. All rights reserved.
 //
 
-#import "FlipsideViewController.h"
+#import <UIKit/UIKit.h>
+#import "PSStackedViewDelegate.h"
 
-#import <CoreData/CoreData.h>
-
-@interface MainViewController : UIViewController <FlipsideViewControllerDelegate>
-
-@property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
-
-@property (strong, nonatomic) UIPopoverController *flipsidePopoverController;
-
-- (IBAction)showInfo:(id)sender;
+@interface MainViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, PSStackedViewDelegate> {
+    UITableView *menuTable_;
+    UIImageView *popIconLeft_;
+    UIImageView *popIconRight_;
+    NSArray *cellContents_;
+}
 
 @end
