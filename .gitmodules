@@ -1,0 +1,3 @@
+[submodule "lib/PSStackedView"]
+	path = lib/PSStackedView
+	url = git://github.com/mball-crrc/PSStackedView.git
