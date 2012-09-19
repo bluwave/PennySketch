@@ -1,0 +1,578 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		556EBF82160A79CA00CC42E9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 556EBF81160A79CA00CC42E9 /* UIKit.framework */; };
+		556EBF84160A79CA00CC42E9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 556EBF83160A79CA00CC42E9 /* Foundation.framework */; };
+		556EBF86160A79CA00CC42E9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 556EBF85160A79CA00CC42E9 /* CoreGraphics.framework */; };
+		556EBF88160A79CA00CC42E9 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 556EBF87160A79CA00CC42E9 /* CoreData.framework */; };
+		556EBF8E160A79CA00CC42E9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 556EBF8C160A79CA00CC42E9 /* InfoPlist.strings */; };
+		556EBF90160A79CA00CC42E9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 556EBF8F160A79CA00CC42E9 /* main.m */; };
+		556EBF94160A79CA00CC42E9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 556EBF93160A79CA00CC42E9 /* AppDelegate.m */; };
+		556EBF96160A79CA00CC42E9 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 556EBF95160A79CA00CC42E9 /* Default.png */; };
+		556EBF98160A79CA00CC42E9 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 556EBF97160A79CA00CC42E9 /* Default@2x.png */; };
+		556EBF9A160A79CA00CC42E9 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 556EBF99160A79CA00CC42E9 /* Default-568h@2x.png */; };
+		556EBF9D160A79CA00CC42E9 /* PennySketch.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 556EBF9B160A79CA00CC42E9 /* PennySketch.xcdatamodeld */; };
+		556EBFA0160A79CA00CC42E9 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 556EBF9F160A79CA00CC42E9 /* MainViewController.m */; };
+		556EBFA3160A79CA00CC42E9 /* FlipsideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 556EBFA2160A79CA00CC42E9 /* FlipsideViewController.m */; };
+		556EBFA6160A79CA00CC42E9 /* MainViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 556EBFA4160A79CA00CC42E9 /* MainViewController_iPhone.xib */; };
+		556EBFA9160A79CA00CC42E9 /* MainViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 556EBFA7160A79CA00CC42E9 /* MainViewController_iPad.xib */; };
+		556EBFAC160A79CA00CC42E9 /* FlipsideViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 556EBFAA160A79CA00CC42E9 /* FlipsideViewController.xib */; };
+		556EBFB4160A79CA00CC42E9 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 556EBFB3160A79CA00CC42E9 /* SenTestingKit.framework */; };
+		556EBFB5160A79CA00CC42E9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 556EBF81160A79CA00CC42E9 /* UIKit.framework */; };
+		556EBFB6160A79CA00CC42E9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 556EBF83160A79CA00CC42E9 /* Foundation.framework */; };
+		556EBFB7160A79CA00CC42E9 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 556EBF87160A79CA00CC42E9 /* CoreData.framework */; };
+		556EBFBF160A79CA00CC42E9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 556EBFBD160A79CA00CC42E9 /* InfoPlist.strings */; };
+		556EBFC2160A79CA00CC42E9 /* PennySketchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 556EBFC1160A79CA00CC42E9 /* PennySketchTests.m */; };
+		55E45D77160A83B600D34B6D /* PSStackedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55E45D6B160A83B600D34B6D /* PSStackedViewController.m */; };
+		55E45D78160A83B600D34B6D /* PSStackedViewGlobal.m in Sources */ = {isa = PBXBuildFile; fileRef = 55E45D6E160A83B600D34B6D /* PSStackedViewGlobal.m */; };
+		55E45D79160A83B600D34B6D /* PSStackedViewSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 55E45D70160A83B600D34B6D /* PSStackedViewSegue.m */; };
+		55E45D7A160A83B600D34B6D /* PSSVContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 55E45D72160A83B600D34B6D /* PSSVContainerView.m */; };
+		55E45D7B160A83B600D34B6D /* UIView+PSSizes.m in Sources */ = {isa = PBXBuildFile; fileRef = 55E45D74160A83B600D34B6D /* UIView+PSSizes.m */; };
+		55E45D7C160A83B600D34B6D /* UIViewController+PSStackedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 55E45D76160A83B600D34B6D /* UIViewController+PSStackedView.m */; };
+		55E45D7E160A83D000D34B6D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55E45D7D160A83D000D34B6D /* QuartzCore.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		556EBFB8160A79CA00CC42E9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 556EBF74160A79CA00CC42E9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 556EBF7C160A79CA00CC42E9;
+			remoteInfo = PennySketch;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		556EBF7D160A79CA00CC42E9 /* PennySketch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PennySketch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		556EBF81160A79CA00CC42E9 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		556EBF83160A79CA00CC42E9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		556EBF85160A79CA00CC42E9 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		556EBF87160A79CA00CC42E9 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		556EBF8B160A79CA00CC42E9 /* PennySketch-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PennySketch-Info.plist"; sourceTree = "<group>"; };
+		556EBF8D160A79CA00CC42E9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		556EBF8F160A79CA00CC42E9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		556EBF91160A79CA00CC42E9 /* PennySketch-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PennySketch-Prefix.pch"; sourceTree = "<group>"; };
+		556EBF92160A79CA00CC42E9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		556EBF93160A79CA00CC42E9 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		556EBF95160A79CA00CC42E9 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		556EBF97160A79CA00CC42E9 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		556EBF99160A79CA00CC42E9 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		556EBF9C160A79CA00CC42E9 /* PennySketch.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PennySketch.xcdatamodel; sourceTree = "<group>"; };
+		556EBF9E160A79CA00CC42E9 /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		556EBF9F160A79CA00CC42E9 /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		556EBFA1160A79CA00CC42E9 /* FlipsideViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FlipsideViewController.h; sourceTree = "<group>"; };
+		556EBFA2160A79CA00CC42E9 /* FlipsideViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FlipsideViewController.m; sourceTree = "<group>"; };
+		556EBFA5160A79CA00CC42E9 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainViewController_iPhone.xib; sourceTree = "<group>"; };
+		556EBFA8160A79CA00CC42E9 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainViewController_iPad.xib; sourceTree = "<group>"; };
+		556EBFAB160A79CA00CC42E9 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/FlipsideViewController.xib; sourceTree = "<group>"; };
+		556EBFB2160A79CA00CC42E9 /* PennySketchTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PennySketchTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		556EBFB3160A79CA00CC42E9 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		556EBFBC160A79CA00CC42E9 /* PennySketchTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PennySketchTests-Info.plist"; sourceTree = "<group>"; };
+		556EBFBE160A79CA00CC42E9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		556EBFC0160A79CA00CC42E9 /* PennySketchTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PennySketchTests.h; sourceTree = "<group>"; };
+		556EBFC1160A79CA00CC42E9 /* PennySketchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PennySketchTests.m; sourceTree = "<group>"; };
+		55E45D69160A83B600D34B6D /* PSStackedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PSStackedView.h; path = lib/PSStackedView/PSStackedView/PSStackedView.h; sourceTree = "<group>"; };
+		55E45D6A160A83B600D34B6D /* PSStackedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PSStackedViewController.h; path = lib/PSStackedView/PSStackedView/PSStackedViewController.h; sourceTree = "<group>"; };
+		55E45D6B160A83B600D34B6D /* PSStackedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PSStackedViewController.m; path = lib/PSStackedView/PSStackedView/PSStackedViewController.m; sourceTree = "<group>"; };
+		55E45D6C160A83B600D34B6D /* PSStackedViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PSStackedViewDelegate.h; path = lib/PSStackedView/PSStackedView/PSStackedViewDelegate.h; sourceTree = "<group>"; };
+		55E45D6D160A83B600D34B6D /* PSStackedViewGlobal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PSStackedViewGlobal.h; path = lib/PSStackedView/PSStackedView/PSStackedViewGlobal.h; sourceTree = "<group>"; };
+		55E45D6E160A83B600D34B6D /* PSStackedViewGlobal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PSStackedViewGlobal.m; path = lib/PSStackedView/PSStackedView/PSStackedViewGlobal.m; sourceTree = "<group>"; };
+		55E45D6F160A83B600D34B6D /* PSStackedViewSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PSStackedViewSegue.h; path = lib/PSStackedView/PSStackedView/PSStackedViewSegue.h; sourceTree = "<group>"; };
+		55E45D70160A83B600D34B6D /* PSStackedViewSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PSStackedViewSegue.m; path = lib/PSStackedView/PSStackedView/PSStackedViewSegue.m; sourceTree = "<group>"; };
+		55E45D71160A83B600D34B6D /* PSSVContainerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PSSVContainerView.h; path = lib/PSStackedView/PSStackedView/PSSVContainerView.h; sourceTree = "<group>"; };
+		55E45D72160A83B600D34B6D /* PSSVContainerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PSSVContainerView.m; path = lib/PSStackedView/PSStackedView/PSSVContainerView.m; sourceTree = "<group>"; };
+		55E45D73160A83B600D34B6D /* UIView+PSSizes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+PSSizes.h"; path = "lib/PSStackedView/PSStackedView/UIView+PSSizes.h"; sourceTree = "<group>"; };
+		55E45D74160A83B600D34B6D /* UIView+PSSizes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+PSSizes.m"; path = "lib/PSStackedView/PSStackedView/UIView+PSSizes.m"; sourceTree = "<group>"; };
+		55E45D75160A83B600D34B6D /* UIViewController+PSStackedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIViewController+PSStackedView.h"; path = "lib/PSStackedView/PSStackedView/UIViewController+PSStackedView.h"; sourceTree = "<group>"; };
+		55E45D76160A83B600D34B6D /* UIViewController+PSStackedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+PSStackedView.m"; path = "lib/PSStackedView/PSStackedView/UIViewController+PSStackedView.m"; sourceTree = "<group>"; };
+		55E45D7D160A83D000D34B6D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		556EBF7A160A79CA00CC42E9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55E45D7E160A83D000D34B6D /* QuartzCore.framework in Frameworks */,
+				556EBF82160A79CA00CC42E9 /* UIKit.framework in Frameworks */,
+				556EBF84160A79CA00CC42E9 /* Foundation.framework in Frameworks */,
+				556EBF86160A79CA00CC42E9 /* CoreGraphics.framework in Frameworks */,
+				556EBF88160A79CA00CC42E9 /* CoreData.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		556EBFAE160A79CA00CC42E9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				556EBFB4160A79CA00CC42E9 /* SenTestingKit.framework in Frameworks */,
+				556EBFB5160A79CA00CC42E9 /* UIKit.framework in Frameworks */,
+				556EBFB6160A79CA00CC42E9 /* Foundation.framework in Frameworks */,
+				556EBFB7160A79CA00CC42E9 /* CoreData.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		556EBF72160A79CA00CC42E9 = {
+			isa = PBXGroup;
+			children = (
+				55E45D66160A829000D34B6D /* lib */,
+				556EBF89160A79CA00CC42E9 /* PennySketch */,
+				556EBFBA160A79CA00CC42E9 /* PennySketchTests */,
+				556EBF80160A79CA00CC42E9 /* Frameworks */,
+				556EBF7E160A79CA00CC42E9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		556EBF7E160A79CA00CC42E9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				556EBF7D160A79CA00CC42E9 /* PennySketch.app */,
+				556EBFB2160A79CA00CC42E9 /* PennySketchTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		556EBF80160A79CA00CC42E9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				55E45D7D160A83D000D34B6D /* QuartzCore.framework */,
+				556EBF81160A79CA00CC42E9 /* UIKit.framework */,
+				556EBF83160A79CA00CC42E9 /* Foundation.framework */,
+				556EBF85160A79CA00CC42E9 /* CoreGraphics.framework */,
+				556EBF87160A79CA00CC42E9 /* CoreData.framework */,
+				556EBFB3160A79CA00CC42E9 /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		556EBF89160A79CA00CC42E9 /* PennySketch */ = {
+			isa = PBXGroup;
+			children = (
+				556EBF92160A79CA00CC42E9 /* AppDelegate.h */,
+				556EBF93160A79CA00CC42E9 /* AppDelegate.m */,
+				556EBF9E160A79CA00CC42E9 /* MainViewController.h */,
+				556EBF9F160A79CA00CC42E9 /* MainViewController.m */,
+				556EBFA1160A79CA00CC42E9 /* FlipsideViewController.h */,
+				556EBFA2160A79CA00CC42E9 /* FlipsideViewController.m */,
+				556EBFA4160A79CA00CC42E9 /* MainViewController_iPhone.xib */,
+				556EBFA7160A79CA00CC42E9 /* MainViewController_iPad.xib */,
+				556EBFAA160A79CA00CC42E9 /* FlipsideViewController.xib */,
+				556EBF9B160A79CA00CC42E9 /* PennySketch.xcdatamodeld */,
+				556EBF8A160A79CA00CC42E9 /* Supporting Files */,
+			);
+			path = PennySketch;
+			sourceTree = "<group>";
+		};
+		556EBF8A160A79CA00CC42E9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				556EBF8B160A79CA00CC42E9 /* PennySketch-Info.plist */,
+				556EBF8C160A79CA00CC42E9 /* InfoPlist.strings */,
+				556EBF8F160A79CA00CC42E9 /* main.m */,
+				556EBF91160A79CA00CC42E9 /* PennySketch-Prefix.pch */,
+				556EBF95160A79CA00CC42E9 /* Default.png */,
+				556EBF97160A79CA00CC42E9 /* Default@2x.png */,
+				556EBF99160A79CA00CC42E9 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		556EBFBA160A79CA00CC42E9 /* PennySketchTests */ = {
+			isa = PBXGroup;
+			children = (
+				556EBFC0160A79CA00CC42E9 /* PennySketchTests.h */,
+				556EBFC1160A79CA00CC42E9 /* PennySketchTests.m */,
+				556EBFBB160A79CA00CC42E9 /* Supporting Files */,
+			);
+			path = PennySketchTests;
+			sourceTree = "<group>";
+		};
+		556EBFBB160A79CA00CC42E9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				556EBFBC160A79CA00CC42E9 /* PennySketchTests-Info.plist */,
+				556EBFBD160A79CA00CC42E9 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		55E45D66160A829000D34B6D /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				55E45D68160A829500D34B6D /* PSStackedView */,
+			);
+			name = lib;
+			sourceTree = "<group>";
+		};
+		55E45D68160A829500D34B6D /* PSStackedView */ = {
+			isa = PBXGroup;
+			children = (
+				55E45D69160A83B600D34B6D /* PSStackedView.h */,
+				55E45D6A160A83B600D34B6D /* PSStackedViewController.h */,
+				55E45D6B160A83B600D34B6D /* PSStackedViewController.m */,
+				55E45D6C160A83B600D34B6D /* PSStackedViewDelegate.h */,
+				55E45D6D160A83B600D34B6D /* PSStackedViewGlobal.h */,
+				55E45D6E160A83B600D34B6D /* PSStackedViewGlobal.m */,
+				55E45D6F160A83B600D34B6D /* PSStackedViewSegue.h */,
+				55E45D70160A83B600D34B6D /* PSStackedViewSegue.m */,
+				55E45D71160A83B600D34B6D /* PSSVContainerView.h */,
+				55E45D72160A83B600D34B6D /* PSSVContainerView.m */,
+				55E45D73160A83B600D34B6D /* UIView+PSSizes.h */,
+				55E45D74160A83B600D34B6D /* UIView+PSSizes.m */,
+				55E45D75160A83B600D34B6D /* UIViewController+PSStackedView.h */,
+				55E45D76160A83B600D34B6D /* UIViewController+PSStackedView.m */,
+			);
+			name = PSStackedView;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		556EBF7C160A79CA00CC42E9 /* PennySketch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 556EBFC5160A79CA00CC42E9 /* Build configuration list for PBXNativeTarget "PennySketch" */;
+			buildPhases = (
+				556EBF79160A79CA00CC42E9 /* Sources */,
+				556EBF7A160A79CA00CC42E9 /* Frameworks */,
+				556EBF7B160A79CA00CC42E9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PennySketch;
+			productName = PennySketch;
+			productReference = 556EBF7D160A79CA00CC42E9 /* PennySketch.app */;
+			productType = "com.apple.product-type.application";
+		};
+		556EBFB1160A79CA00CC42E9 /* PennySketchTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 556EBFC8160A79CA00CC42E9 /* Build configuration list for PBXNativeTarget "PennySketchTests" */;
+			buildPhases = (
+				556EBFAD160A79CA00CC42E9 /* Sources */,
+				556EBFAE160A79CA00CC42E9 /* Frameworks */,
+				556EBFAF160A79CA00CC42E9 /* Resources */,
+				556EBFB0160A79CA00CC42E9 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				556EBFB9160A79CA00CC42E9 /* PBXTargetDependency */,
+			);
+			name = PennySketchTests;
+			productName = PennySketchTests;
+			productReference = 556EBFB2160A79CA00CC42E9 /* PennySketchTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		556EBF74160A79CA00CC42E9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = Sarcasm;
+			};
+			buildConfigurationList = 556EBF77160A79CA00CC42E9 /* Build configuration list for PBXProject "PennySketch" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 556EBF72160A79CA00CC42E9;
+			productRefGroup = 556EBF7E160A79CA00CC42E9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				556EBF7C160A79CA00CC42E9 /* PennySketch */,
+				556EBFB1160A79CA00CC42E9 /* PennySketchTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		556EBF7B160A79CA00CC42E9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				556EBF8E160A79CA00CC42E9 /* InfoPlist.strings in Resources */,
+				556EBF96160A79CA00CC42E9 /* Default.png in Resources */,
+				556EBF98160A79CA00CC42E9 /* Default@2x.png in Resources */,
+				556EBF9A160A79CA00CC42E9 /* Default-568h@2x.png in Resources */,
+				556EBFA6160A79CA00CC42E9 /* MainViewController_iPhone.xib in Resources */,
+				556EBFA9160A79CA00CC42E9 /* MainViewController_iPad.xib in Resources */,
+				556EBFAC160A79CA00CC42E9 /* FlipsideViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		556EBFAF160A79CA00CC42E9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				556EBFBF160A79CA00CC42E9 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		556EBFB0160A79CA00CC42E9 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		556EBF79160A79CA00CC42E9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				556EBF90160A79CA00CC42E9 /* main.m in Sources */,
+				556EBF94160A79CA00CC42E9 /* AppDelegate.m in Sources */,
+				556EBF9D160A79CA00CC42E9 /* PennySketch.xcdatamodeld in Sources */,
+				556EBFA0160A79CA00CC42E9 /* MainViewController.m in Sources */,
+				556EBFA3160A79CA00CC42E9 /* FlipsideViewController.m in Sources */,
+				55E45D77160A83B600D34B6D /* PSStackedViewController.m in Sources */,
+				55E45D78160A83B600D34B6D /* PSStackedViewGlobal.m in Sources */,
+				55E45D79160A83B600D34B6D /* PSStackedViewSegue.m in Sources */,
+				55E45D7A160A83B600D34B6D /* PSSVContainerView.m in Sources */,
+				55E45D7B160A83B600D34B6D /* UIView+PSSizes.m in Sources */,
+				55E45D7C160A83B600D34B6D /* UIViewController+PSStackedView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		556EBFAD160A79CA00CC42E9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				556EBFC2160A79CA00CC42E9 /* PennySketchTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		556EBFB9160A79CA00CC42E9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 556EBF7C160A79CA00CC42E9 /* PennySketch */;
+			targetProxy = 556EBFB8160A79CA00CC42E9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		556EBF8C160A79CA00CC42E9 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				556EBF8D160A79CA00CC42E9 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		556EBFA4160A79CA00CC42E9 /* MainViewController_iPhone.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				556EBFA5160A79CA00CC42E9 /* en */,
+			);
+			name = MainViewController_iPhone.xib;
+			sourceTree = "<group>";
+		};
+		556EBFA7160A79CA00CC42E9 /* MainViewController_iPad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				556EBFA8160A79CA00CC42E9 /* en */,
+			);
+			name = MainViewController_iPad.xib;
+			sourceTree = "<group>";
+		};
+		556EBFAA160A79CA00CC42E9 /* FlipsideViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				556EBFAB160A79CA00CC42E9 /* en */,
+			);
+			name = FlipsideViewController.xib;
+			sourceTree = "<group>";
+		};
+		556EBFBD160A79CA00CC42E9 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				556EBFBE160A79CA00CC42E9 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		556EBFC3160A79CA00CC42E9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		556EBFC4160A79CA00CC42E9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		556EBFC6160A79CA00CC42E9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PennySketch/PennySketch-Prefix.pch";
+				INFOPLIST_FILE = "PennySketch/PennySketch-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		556EBFC7160A79CA00CC42E9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PennySketch/PennySketch-Prefix.pch";
+				INFOPLIST_FILE = "PennySketch/PennySketch-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		556EBFC9160A79CA00CC42E9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/PennySketch.app/PennySketch";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PennySketch/PennySketch-Prefix.pch";
+				INFOPLIST_FILE = "PennySketchTests/PennySketchTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		556EBFCA160A79CA00CC42E9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/PennySketch.app/PennySketch";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PennySketch/PennySketch-Prefix.pch";
+				INFOPLIST_FILE = "PennySketchTests/PennySketchTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		556EBF77160A79CA00CC42E9 /* Build configuration list for PBXProject "PennySketch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				556EBFC3160A79CA00CC42E9 /* Debug */,
+				556EBFC4160A79CA00CC42E9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		556EBFC5160A79CA00CC42E9 /* Build configuration list for PBXNativeTarget "PennySketch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				556EBFC6160A79CA00CC42E9 /* Debug */,
+				556EBFC7160A79CA00CC42E9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		556EBFC8160A79CA00CC42E9 /* Build configuration list for PBXNativeTarget "PennySketchTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				556EBFC9160A79CA00CC42E9 /* Debug */,
+				556EBFCA160A79CA00CC42E9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		556EBF9B160A79CA00CC42E9 /* PennySketch.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				556EBF9C160A79CA00CC42E9 /* PennySketch.xcdatamodel */,
+			);
+			currentVersion = 556EBF9C160A79CA00CC42E9 /* PennySketch.xcdatamodel */;
+			path = PennySketch.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 556EBF74160A79CA00CC42E9 /* Project object */;
+}
