@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		35E93ABA0A888FE86987FCF3 /* UIImage+OverlayColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 35E938E8FA67A00F3FEEE317 /* UIImage+OverlayColor.m */; };
+		5529B010160B90CC004AFA80 /* MenuTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5529B00F160B90CC004AFA80 /* MenuTableViewCell.m */; };
 		556EBF82160A79CA00CC42E9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 556EBF81160A79CA00CC42E9 /* UIKit.framework */; };
 		556EBF84160A79CA00CC42E9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 556EBF83160A79CA00CC42E9 /* Foundation.framework */; };
 		556EBF86160A79CA00CC42E9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 556EBF85160A79CA00CC42E9 /* CoreGraphics.framework */; };
@@ -29,13 +31,23 @@
 		556EBFB7160A79CA00CC42E9 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 556EBF87160A79CA00CC42E9 /* CoreData.framework */; };
 		556EBFBF160A79CA00CC42E9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 556EBFBD160A79CA00CC42E9 /* InfoPlist.strings */; };
 		556EBFC2160A79CA00CC42E9 /* PennySketchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 556EBFC1160A79CA00CC42E9 /* PennySketchTests.m */; };
-		55E45D77160A83B600D34B6D /* PSStackedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55E45D6B160A83B600D34B6D /* PSStackedViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		55E45D78160A83B600D34B6D /* PSStackedViewGlobal.m in Sources */ = {isa = PBXBuildFile; fileRef = 55E45D6E160A83B600D34B6D /* PSStackedViewGlobal.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		55E45D79160A83B600D34B6D /* PSStackedViewSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 55E45D70160A83B600D34B6D /* PSStackedViewSegue.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		55E45D7A160A83B600D34B6D /* PSSVContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 55E45D72160A83B600D34B6D /* PSSVContainerView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		55E45D7B160A83B600D34B6D /* UIView+PSSizes.m in Sources */ = {isa = PBXBuildFile; fileRef = 55E45D74160A83B600D34B6D /* UIView+PSSizes.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		55E45D7C160A83B600D34B6D /* UIViewController+PSStackedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 55E45D76160A83B600D34B6D /* UIViewController+PSStackedView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		55E45D77160A83B600D34B6D /* PSStackedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55E45D6B160A83B600D34B6D /* PSStackedViewController.m */; };
+		55E45D78160A83B600D34B6D /* PSStackedViewGlobal.m in Sources */ = {isa = PBXBuildFile; fileRef = 55E45D6E160A83B600D34B6D /* PSStackedViewGlobal.m */; };
+		55E45D79160A83B600D34B6D /* PSStackedViewSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 55E45D70160A83B600D34B6D /* PSStackedViewSegue.m */; };
+		55E45D7A160A83B600D34B6D /* PSSVContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 55E45D72160A83B600D34B6D /* PSSVContainerView.m */; };
+		55E45D7B160A83B600D34B6D /* UIView+PSSizes.m in Sources */ = {isa = PBXBuildFile; fileRef = 55E45D74160A83B600D34B6D /* UIView+PSSizes.m */; };
+		55E45D7C160A83B600D34B6D /* UIViewController+PSStackedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 55E45D76160A83B600D34B6D /* UIViewController+PSStackedView.m */; };
 		55E45D7E160A83D000D34B6D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55E45D7D160A83D000D34B6D /* QuartzCore.framework */; };
+		55F62BEF160BB002002596A9 /* 08-chat.png in Resources */ = {isa = PBXBuildFile; fileRef = 55F62BEB160BB002002596A9 /* 08-chat.png */; };
+		55F62BF0160BB002002596A9 /* 11-clock.png in Resources */ = {isa = PBXBuildFile; fileRef = 55F62BEC160BB002002596A9 /* 11-clock.png */; };
+		55F62BF1160BB002002596A9 /* 15-tags.png in Resources */ = {isa = PBXBuildFile; fileRef = 55F62BED160BB002002596A9 /* 15-tags.png */; };
+		55F62BF2160BB002002596A9 /* popIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 55F62BEE160BB002002596A9 /* popIcon.png */; };
+		55F62BF5160BB016002596A9 /* NewGlow.png in Resources */ = {isa = PBXBuildFile; fileRef = 55F62BF3160BB016002596A9 /* NewGlow.png */; };
+		55F62BF6160BB016002596A9 /* NewGlow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 55F62BF4160BB016002596A9 /* NewGlow@2x.png */; };
+		55F62C15160BB291002596A9 /* images.png in Resources */ = {isa = PBXBuildFile; fileRef = 55F62C14160BB291002596A9 /* images.png */; };
+		55F62C18160BB30C002596A9 /* images2.png in Resources */ = {isa = PBXBuildFile; fileRef = 55F62C16160BB30C002596A9 /* images2.png */; };
+		55F62C19160BB30C002596A9 /* search.png in Resources */ = {isa = PBXBuildFile; fileRef = 55F62C17160BB30C002596A9 /* search.png */; };
+		55F62C1C160BB42F002596A9 /* BrowserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55F62C1B160BB42F002596A9 /* BrowserViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +61,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		35E9302DD85D07CBBAE89BB8 /* UIImage+OverlayColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+OverlayColor.h"; path = "PennySketch/UIImage+OverlayColor.h"; sourceTree = "<group>"; };
+		35E938E8FA67A00F3FEEE317 /* UIImage+OverlayColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+OverlayColor.m"; path = "PennySketch/UIImage+OverlayColor.m"; sourceTree = "<group>"; };
+		5529B00E160B90CC004AFA80 /* MenuTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuTableViewCell.h; sourceTree = "<group>"; };
+		5529B00F160B90CC004AFA80 /* MenuTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuTableViewCell.m; sourceTree = "<group>"; };
 		556EBF7D160A79CA00CC42E9 /* PennySketch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PennySketch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		556EBF81160A79CA00CC42E9 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		556EBF83160A79CA00CC42E9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -92,6 +108,17 @@
 		55E45D75160A83B600D34B6D /* UIViewController+PSStackedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIViewController+PSStackedView.h"; path = "lib/PSStackedView/PSStackedView/UIViewController+PSStackedView.h"; sourceTree = "<group>"; };
 		55E45D76160A83B600D34B6D /* UIViewController+PSStackedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+PSStackedView.m"; path = "lib/PSStackedView/PSStackedView/UIViewController+PSStackedView.m"; sourceTree = "<group>"; };
 		55E45D7D160A83D000D34B6D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		55F62BEB160BB002002596A9 /* 08-chat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "08-chat.png"; path = "images/08-chat.png"; sourceTree = "<group>"; };
+		55F62BEC160BB002002596A9 /* 11-clock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "11-clock.png"; path = "images/11-clock.png"; sourceTree = "<group>"; };
+		55F62BED160BB002002596A9 /* 15-tags.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "15-tags.png"; path = "images/15-tags.png"; sourceTree = "<group>"; };
+		55F62BEE160BB002002596A9 /* popIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = popIcon.png; path = images/popIcon.png; sourceTree = "<group>"; };
+		55F62BF3160BB016002596A9 /* NewGlow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = NewGlow.png; path = images/NewGlow/NewGlow.png; sourceTree = "<group>"; };
+		55F62BF4160BB016002596A9 /* NewGlow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "NewGlow@2x.png"; path = "images/NewGlow/NewGlow@2x.png"; sourceTree = "<group>"; };
+		55F62C14160BB291002596A9 /* images.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = images.png; path = images/images.png; sourceTree = "<group>"; };
+		55F62C16160BB30C002596A9 /* images2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = images2.png; path = images/images2.png; sourceTree = "<group>"; };
+		55F62C17160BB30C002596A9 /* search.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = search.png; path = images/search.png; sourceTree = "<group>"; };
+		55F62C1A160BB42F002596A9 /* BrowserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BrowserViewController.h; sourceTree = "<group>"; };
+		55F62C1B160BB42F002596A9 /* BrowserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BrowserViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +151,7 @@
 		556EBF72160A79CA00CC42E9 = {
 			isa = PBXGroup;
 			children = (
+				55F62BE9160BAF94002596A9 /* images */,
 				55E45D66160A829000D34B6D /* lib */,
 				556EBF89160A79CA00CC42E9 /* PennySketch */,
 				556EBFBA160A79CA00CC42E9 /* PennySketchTests */,
@@ -157,6 +185,8 @@
 		556EBF89160A79CA00CC42E9 /* PennySketch */ = {
 			isa = PBXGroup;
 			children = (
+				5529B00E160B90CC004AFA80 /* MenuTableViewCell.h */,
+				5529B00F160B90CC004AFA80 /* MenuTableViewCell.m */,
 				556EBF92160A79CA00CC42E9 /* AppDelegate.h */,
 				556EBF93160A79CA00CC42E9 /* AppDelegate.m */,
 				556EBF9E160A79CA00CC42E9 /* MainViewController.h */,
@@ -168,6 +198,8 @@
 				556EBFAA160A79CA00CC42E9 /* FlipsideViewController.xib */,
 				556EBF9B160A79CA00CC42E9 /* PennySketch.xcdatamodeld */,
 				556EBF8A160A79CA00CC42E9 /* Supporting Files */,
+				55F62C1A160BB42F002596A9 /* BrowserViewController.h */,
+				55F62C1B160BB42F002596A9 /* BrowserViewController.m */,
 			);
 			path = PennySketch;
 			sourceTree = "<group>";
@@ -216,6 +248,8 @@
 		55E45D68160A829500D34B6D /* PSStackedView */ = {
 			isa = PBXGroup;
 			children = (
+				35E938E8FA67A00F3FEEE317 /* UIImage+OverlayColor.m */,
+				35E9302DD85D07CBBAE89BB8 /* UIImage+OverlayColor.h */,
 				55E45D69160A83B600D34B6D /* PSStackedView.h */,
 				55E45D6A160A83B600D34B6D /* PSStackedViewController.h */,
 				55E45D6B160A83B600D34B6D /* PSStackedViewController.m */,
@@ -232,6 +266,22 @@
 				55E45D76160A83B600D34B6D /* UIViewController+PSStackedView.m */,
 			);
 			name = PSStackedView;
+			sourceTree = "<group>";
+		};
+		55F62BE9160BAF94002596A9 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				55F62C16160BB30C002596A9 /* images2.png */,
+				55F62C17160BB30C002596A9 /* search.png */,
+				55F62C14160BB291002596A9 /* images.png */,
+				55F62BF3160BB016002596A9 /* NewGlow.png */,
+				55F62BF4160BB016002596A9 /* NewGlow@2x.png */,
+				55F62BEB160BB002002596A9 /* 08-chat.png */,
+				55F62BEC160BB002002596A9 /* 11-clock.png */,
+				55F62BED160BB002002596A9 /* 15-tags.png */,
+				55F62BEE160BB002002596A9 /* popIcon.png */,
+			);
+			name = images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -312,6 +362,15 @@
 				556EBFA6160A79CA00CC42E9 /* MainViewController_iPhone.xib in Resources */,
 				556EBFA9160A79CA00CC42E9 /* MainViewController_iPad.xib in Resources */,
 				556EBFAC160A79CA00CC42E9 /* FlipsideViewController.xib in Resources */,
+				55F62BEF160BB002002596A9 /* 08-chat.png in Resources */,
+				55F62BF0160BB002002596A9 /* 11-clock.png in Resources */,
+				55F62BF1160BB002002596A9 /* 15-tags.png in Resources */,
+				55F62BF2160BB002002596A9 /* popIcon.png in Resources */,
+				55F62BF5160BB016002596A9 /* NewGlow.png in Resources */,
+				55F62BF6160BB016002596A9 /* NewGlow@2x.png in Resources */,
+				55F62C15160BB291002596A9 /* images.png in Resources */,
+				55F62C18160BB30C002596A9 /* images2.png in Resources */,
+				55F62C19160BB30C002596A9 /* search.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -357,6 +416,9 @@
 				55E45D7A160A83B600D34B6D /* PSSVContainerView.m in Sources */,
 				55E45D7B160A83B600D34B6D /* UIView+PSSizes.m in Sources */,
 				55E45D7C160A83B600D34B6D /* UIViewController+PSStackedView.m in Sources */,
+				35E93ABA0A888FE86987FCF3 /* UIImage+OverlayColor.m in Sources */,
+				5529B010160B90CC004AFA80 /* MenuTableViewCell.m in Sources */,
+				55F62C1C160BB42F002596A9 /* BrowserViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

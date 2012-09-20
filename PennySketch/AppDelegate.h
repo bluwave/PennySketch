@@ -9,6 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @class MainViewController;
+@class PSStackedViewController;
+
+#define XAppDelegate ((AppDelegate *)[[UIApplication sharedApplication] delegate])
+
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
@@ -22,5 +26,6 @@
 - (NSURL *)applicationDocumentsDirectory;
 
 @property (strong, nonatomic) MainViewController *mainViewController;
+@property (nonatomic, strong, readonly) PSStackedViewController *stackController;
 
 @end

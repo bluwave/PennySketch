@@ -8,12 +8,13 @@
 
 #import "PSStackedView.h"
 #import "AppDelegate.h"
-//#import "MenuTableViewCell.h"
+#import "MenuTableViewCell.h"
 //#import "ExampleMenuRootController.h"
 #import "MainViewController.h"
 //#import "ExampleViewController1.h"
 //#import "ExampleViewController2.h"
-//#import "UIImage+OverlayColor.h"
+#import "UIImage+OverlayColor.h"
+#import "BrowserViewController.h"
 
 #include <QuartzCore/QuartzCore.h>
 
@@ -53,17 +54,14 @@
 #endif
     
     // add example background
-    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background"]];
+    self.view.backgroundColor = [UIColor scrollViewTexturedBackgroundColor];
             
     // prepare menu content
-    NSMutableArray *contents = [[NSMutableArray alloc] init];
-    [contents addObject:[NSDictionary dictionaryWithObjectsAndKeys:[UIImage invertImageNamed:@"08-chat"], kCellImage, NSLocalizedString(@"Example1",@""), kCellText, nil]];
-    [contents addObject:[NSDictionary dictionaryWithObjectsAndKeys:[UIImage invertImageNamed:@"11-clock"], kCellImage, NSLocalizedString(@"Example2",@""), kCellText, nil]];
-    [contents addObject:[NSDictionary dictionaryWithObjectsAndKeys:[UIImage invertImageNamed:@"15-tags"], kCellImage, NSLocalizedString(@" ",@""), kCellText, nil]];
-    [contents addObject:[NSDictionary dictionaryWithObjectsAndKeys:[UIImage invertImageNamed:@"08-chat"], kCellImage, NSLocalizedString(@"<- Collapse",@""), kCellText, nil]];
-    [contents addObject:[NSDictionary dictionaryWithObjectsAndKeys:[UIImage invertImageNamed:@"11-clock"], kCellImage, NSLocalizedString(@"Expand ->",@""), kCellText, nil]];
-    [contents addObject:[NSDictionary dictionaryWithObjectsAndKeys:[UIImage invertImageNamed:@"15-tags"], kCellImage, NSLocalizedString(@"Clear All",@""), kCellText, nil]];    
-    self.cellContents = contents;
+
+    self.cellContents = @[@{kCellText: @"View Images", kCellImage : [UIImage invertImageNamed:@"images2.png"]}, @{kCellText: @"Find Images", kCellImage : [UIImage invertImageNamed:@"search.png"]}];
+
+
+
     
     // add table menu
 	UITableView *tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, kMenuWidth, self.view.height) style:UITableViewStylePlain];
@@ -109,9 +107,7 @@
 	cell.textLabel.text = [[cellContents_ objectAtIndex:indexPath.row] objectForKey:kCellText];
 	cell.imageView.image = [[cellContents_ objectAtIndex:indexPath.row] objectForKey:kCellImage];
 	    
-    //if (indexPath.row == 5)
-    //    cell.enabled = NO;
-    
+
     return cell;
 }
 
@@ -124,40 +120,44 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {  
+    NSLog(@"%s ",__func__);
+
     PSStackedViewController *stackController = XAppDelegate.stackController;
-    UIViewController*viewController = nil;
-    
-    
-    if (indexPath.row < 3) {
-        // Pop everything off the stack to start a with a fresh app feature
-        // DISABLED FOR DEBUGGING
-        //[stackController popToRootViewControllerAnimated:YES];
-    }
-    
+//    UIViewController*viewController = nil;
+//    
+//    
+//    if (indexPath.row < 3) {
+//        // Pop everything off the stack to start a with a fresh app feature
+//        // DISABLED FOR DEBUGGING
+//        //[stackController popToRootViewControllerAnimated:YES];
+//    }
+//    
     if (indexPath.row == 0) {
-        viewController = [[ExampleViewController1 alloc] initWithNibName:@"ExampleViewController1" bundle:nil];
-        ((ExampleViewController1 *)viewController).indexNumber = [stackController.viewControllers count];
-    }else if(indexPath.row == 1) {
-        viewController = [[ExampleViewController2 alloc] initWithStyle:UITableViewStylePlain];     
-        ((ExampleViewController2 *)viewController).indexNumber = [stackController.viewControllers count];
-    }else if(indexPath.row == 2) { // Twitter style
-        viewController = [[ExampleViewController1 alloc] initWithNibName:@"ExampleViewController1" bundle:nil];
-        ((ExampleViewController1 *)viewController).indexNumber = [stackController.viewControllers count];
-        viewController.view.width = roundf((self.view.width - stackController.leftInset)/2);
+        BrowserViewController * brwsr = [[BrowserViewController alloc] init];
+        [XAppDelegate.stackController pushViewController:brwsr fromViewController:nil animated:YES];
+
     }
-    else if(indexPath.row == 3) {        
-        [stackController collapseStack:1 animated:YES];
-    }else if(indexPath.row == 4) { // right
-        [stackController expandStack:1 animated:YES];
-    }else if(indexPath.row == 5) {
-        while ([stackController.viewControllers count]) {
-            [stackController popViewControllerAnimated:YES];
-        }
-    }
-    
-    if (viewController) {
-        [XAppDelegate.stackController pushViewController:viewController fromViewController:nil animated:YES];
-    }
+//    else if(indexPath.row == 1) {
+//        viewController = [[ExampleViewController2 alloc] initWithStyle:UITableViewStylePlain];     
+//        ((ExampleViewController2 *)viewController).indexNumber = [stackController.viewControllers count];
+//    }else if(indexPath.row == 2) { // Twitter style
+//        viewController = [[ExampleViewController1 alloc] initWithNibName:@"ExampleViewController1" bundle:nil];
+//        ((ExampleViewController1 *)viewController).indexNumber = [stackController.viewControllers count];
+//        viewController.view.width = roundf((self.view.width - stackController.leftInset)/2);
+//    }
+//    else if(indexPath.row == 3) {        
+//        [stackController collapseStack:1 animated:YES];
+//    }else if(indexPath.row == 4) { // right
+//        [stackController expandStack:1 animated:YES];
+//    }else if(indexPath.row == 5) {
+//        while ([stackController.viewControllers count]) {
+//            [stackController popViewControllerAnimated:YES];
+//        }
+//    }
+//    
+//    if (viewController) {
+//        [XAppDelegate.stackController pushViewController:viewController fromViewController:nil animated:YES];
+//    }
 }
 
 /// PSStackedViewDelegate methods
