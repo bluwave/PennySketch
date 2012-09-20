@@ -133,7 +133,9 @@
 //    }
 //    
     if (indexPath.row == 0) {
-        BrowserViewController * brwsr = [[BrowserViewController alloc] init];
+//        BrowserViewController * brwsr = [[BrowserViewController alloc] initWithAddress:@"http://www.google.com"];
+        BrowserViewController * brwsr = [[BrowserViewController alloc] initWithAddress:@"http://abduzeedo.com/cool-illustrated-facial-expressions"];
+
         [XAppDelegate.stackController pushViewController:brwsr fromViewController:nil animated:YES];
 
     }

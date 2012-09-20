@@ -48,6 +48,11 @@
 		55F62C18160BB30C002596A9 /* images2.png in Resources */ = {isa = PBXBuildFile; fileRef = 55F62C16160BB30C002596A9 /* images2.png */; };
 		55F62C19160BB30C002596A9 /* search.png in Resources */ = {isa = PBXBuildFile; fileRef = 55F62C17160BB30C002596A9 /* search.png */; };
 		55F62C1C160BB42F002596A9 /* BrowserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55F62C1B160BB42F002596A9 /* BrowserViewController.m */; };
+		55F62C24160BC876002596A9 /* SVModalWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55F62C20160BC876002596A9 /* SVModalWebViewController.m */; };
+		55F62C25160BC876002596A9 /* SVWebViewController.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 55F62C21160BC876002596A9 /* SVWebViewController.bundle */; };
+		55F62C26160BC876002596A9 /* SVWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55F62C23160BC876002596A9 /* SVWebViewController.m */; };
+		55F62C28160BC97E002596A9 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55F62C27160BC97E002596A9 /* MessageUI.framework */; };
+		55F62C2B160BDB64002596A9 /* UIWebView+UIWebView_UrlExtractionUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 55F62C2A160BDB64002596A9 /* UIWebView+UIWebView_UrlExtractionUtils.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -119,6 +124,14 @@
 		55F62C17160BB30C002596A9 /* search.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = search.png; path = images/search.png; sourceTree = "<group>"; };
 		55F62C1A160BB42F002596A9 /* BrowserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BrowserViewController.h; sourceTree = "<group>"; };
 		55F62C1B160BB42F002596A9 /* BrowserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BrowserViewController.m; sourceTree = "<group>"; };
+		55F62C1F160BC876002596A9 /* SVModalWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVModalWebViewController.h; sourceTree = "<group>"; };
+		55F62C20160BC876002596A9 /* SVModalWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVModalWebViewController.m; sourceTree = "<group>"; };
+		55F62C21160BC876002596A9 /* SVWebViewController.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVWebViewController.bundle; sourceTree = "<group>"; };
+		55F62C22160BC876002596A9 /* SVWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVWebViewController.h; sourceTree = "<group>"; };
+		55F62C23160BC876002596A9 /* SVWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVWebViewController.m; sourceTree = "<group>"; };
+		55F62C27160BC97E002596A9 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		55F62C29160BDB64002596A9 /* UIWebView+UIWebView_UrlExtractionUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+UIWebView_UrlExtractionUtils.h"; sourceTree = "<group>"; };
+		55F62C2A160BDB64002596A9 /* UIWebView+UIWebView_UrlExtractionUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+UIWebView_UrlExtractionUtils.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +139,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55F62C28160BC97E002596A9 /* MessageUI.framework in Frameworks */,
 				55E45D7E160A83D000D34B6D /* QuartzCore.framework in Frameworks */,
 				556EBF82160A79CA00CC42E9 /* UIKit.framework in Frameworks */,
 				556EBF84160A79CA00CC42E9 /* Foundation.framework in Frameworks */,
@@ -172,6 +186,7 @@
 		556EBF80160A79CA00CC42E9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				55F62C27160BC97E002596A9 /* MessageUI.framework */,
 				55E45D7D160A83D000D34B6D /* QuartzCore.framework */,
 				556EBF81160A79CA00CC42E9 /* UIKit.framework */,
 				556EBF83160A79CA00CC42E9 /* Foundation.framework */,
@@ -200,6 +215,8 @@
 				556EBF8A160A79CA00CC42E9 /* Supporting Files */,
 				55F62C1A160BB42F002596A9 /* BrowserViewController.h */,
 				55F62C1B160BB42F002596A9 /* BrowserViewController.m */,
+				55F62C29160BDB64002596A9 /* UIWebView+UIWebView_UrlExtractionUtils.h */,
+				55F62C2A160BDB64002596A9 /* UIWebView+UIWebView_UrlExtractionUtils.m */,
 			);
 			path = PennySketch;
 			sourceTree = "<group>";
@@ -240,6 +257,7 @@
 		55E45D66160A829000D34B6D /* lib */ = {
 			isa = PBXGroup;
 			children = (
+				55F62C1D160BC834002596A9 /* SVWebViewController */,
 				55E45D68160A829500D34B6D /* PSStackedView */,
 			);
 			name = lib;
@@ -282,6 +300,27 @@
 				55F62BEE160BB002002596A9 /* popIcon.png */,
 			);
 			name = images;
+			sourceTree = "<group>";
+		};
+		55F62C1D160BC834002596A9 /* SVWebViewController */ = {
+			isa = PBXGroup;
+			children = (
+				55F62C1E160BC876002596A9 /* SVWebViewController */,
+			);
+			name = SVWebViewController;
+			sourceTree = "<group>";
+		};
+		55F62C1E160BC876002596A9 /* SVWebViewController */ = {
+			isa = PBXGroup;
+			children = (
+				55F62C1F160BC876002596A9 /* SVModalWebViewController.h */,
+				55F62C20160BC876002596A9 /* SVModalWebViewController.m */,
+				55F62C21160BC876002596A9 /* SVWebViewController.bundle */,
+				55F62C22160BC876002596A9 /* SVWebViewController.h */,
+				55F62C23160BC876002596A9 /* SVWebViewController.m */,
+			);
+			name = SVWebViewController;
+			path = lib/SVWebViewController/SVWebViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -371,6 +410,7 @@
 				55F62C15160BB291002596A9 /* images.png in Resources */,
 				55F62C18160BB30C002596A9 /* images2.png in Resources */,
 				55F62C19160BB30C002596A9 /* search.png in Resources */,
+				55F62C25160BC876002596A9 /* SVWebViewController.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,6 +459,9 @@
 				35E93ABA0A888FE86987FCF3 /* UIImage+OverlayColor.m in Sources */,
 				5529B010160B90CC004AFA80 /* MenuTableViewCell.m in Sources */,
 				55F62C1C160BB42F002596A9 /* BrowserViewController.m in Sources */,
+				55F62C24160BC876002596A9 /* SVModalWebViewController.m in Sources */,
+				55F62C26160BC876002596A9 /* SVWebViewController.m in Sources */,
+				55F62C2B160BDB64002596A9 /* UIWebView+UIWebView_UrlExtractionUtils.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

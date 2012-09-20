@@ -8,7 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "PSStackedViewDelegate.h"
+#import "SVWebViewController.h"
 
-@interface BrowserViewController : UIViewController  <PSStackedViewDelegate>
+@class SVWebViewController;
+
+@interface BrowserViewController : SVModalWebViewController  <PSStackedViewDelegate,UIGestureRecognizerDelegate>
+
 
 @end
