@@ -10,6 +10,7 @@
 #import "PSStackedViewGlobal.h"
 #import "SVWebViewController.h"
 #import "UIWebView+UIWebView_UrlExtractionUtils.h"
+#import "AFNetworking.h"
 
 @interface BrowserViewController ()
 
@@ -96,12 +97,56 @@
         if (url)
         {
             NSLog(@"%s url: %@",__func__, url);
+            [self downloadImage:url];
+        }
+        else
+        {
+            NSLog(@"%s ** no image at point",__func__);
         }
 
     }
 
 
 
+}
+
+-(void) downloadImage:(NSURL *) url
+{
+
+    @synchronized (self)
+    {
+
+    NSURLRequest *req = [NSURLRequest requestWithURL:url];
+    AFImageRequestOperation * op = [AFImageRequestOperation imageRequestOperationWithRequest:req imageProcessingBlock:^UIImage *(UIImage *in)
+    {
+        @try
+        {
+            NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+            NSString *documentsDirectory = [paths objectAtIndex:0];
+            NSString *localFilePath = [documentsDirectory stringByAppendingPathComponent:[url lastPathComponent]];
+            NSData *data = UIImagePNGRepresentation(in);
+            [data writeToFile:localFilePath atomically:YES];
+
+        }
+        @catch (NSException * ex)
+        {
+            NSLog(@"%s ex: %@", __func__, [ex description]);
+        }
+        @finally
+        {
+            NSLog(@"%s ** returning",__func__);
+            return in;
+        }
+    }                                                 success:^(NSURLRequest *req0, NSURLResponse *resp, UIImage *img)
+    {
+
+    }                                                 failure:^(NSURLRequest *req1, NSURLResponse *resp, NSError *error)
+    {
+        [[[UIAlertView alloc] initWithTitle:nil message:[error localizedDescription] delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
+    }];
+
+    [op start];
+    }
 }
 
 @end

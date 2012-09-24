@@ -1,3 +1,6 @@
 [submodule "lib/PSStackedView"]
 	path = lib/PSStackedView
 	url = git://github.com/mball-crrc/PSStackedView.git
+[submodule "lib/AFNetworking"]
+	path = lib/AFNetworking
+	url = git://github.com/AFNetworking/AFNetworking.git
