@@ -12,6 +12,8 @@
 #import "UIWebView+UIWebView_UrlExtractionUtils.h"
 #import "AFNetworking.h"
 #import "PSUtils.h"
+#import "RIButtonItem.h"
+#import "UIAlertView+Blocks.h"
 
 #import <CommonCrypto/CommonDigest.h>
 
@@ -168,14 +170,26 @@
          p = CGPointMake([ptArr[0] floatValue], [ptArr[1] floatValue]);
     }
 
-
     UIWebView *wv = [self getWebView];
     if (wv)
     {
+
         NSURL *url = [wv urlForImageAtPoint:p];
         if (url)
         {
-            [self downloadImage:url];
+
+            RIButtonItem * okBtn = [RIButtonItem item];
+            okBtn.label = @"OK";
+            okBtn.action = ^{
+                [self downloadImage:url];
+            };
+
+            RIButtonItem *cancel = [RIButtonItem item];
+            cancel.label = @"Cancel";
+
+
+            [[[UIAlertView alloc] initWithTitle:@"Do you want to save this image?" message:nil cancelButtonItem:okBtn otherButtonItems:cancel, nil] show];
+
         }
         else
         {

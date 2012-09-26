@@ -12,6 +12,9 @@
 		550147DF1613A68F003A7A3C /* ImageGroupCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 550147DE1613A68F003A7A3C /* ImageGroupCell.m */; };
 		550147E51613AD46003A7A3C /* UIImage+ProportionalFill.m in Sources */ = {isa = PBXBuildFile; fileRef = 550147E21613AD46003A7A3C /* UIImage+ProportionalFill.m */; };
 		550147E61613AD46003A7A3C /* UIImage+Tint.m in Sources */ = {isa = PBXBuildFile; fileRef = 550147E41613AD46003A7A3C /* UIImage+Tint.m */; };
+		550147EE1613B490003A7A3C /* RIButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 550147E91613B490003A7A3C /* RIButtonItem.m */; };
+		550147EF1613B490003A7A3C /* UIActionSheet+Blocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 550147EB1613B490003A7A3C /* UIActionSheet+Blocks.m */; };
+		550147F01613B490003A7A3C /* UIAlertView+Blocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 550147ED1613B490003A7A3C /* UIAlertView+Blocks.m */; };
 		5502390D1612558000FC8903 /* ImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5502390C1612558000FC8903 /* ImageViewController.m */; };
 		550239121612643600FC8903 /* TapDetectingWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 550239111612643600FC8903 /* TapDetectingWindow.m */; };
 		5529B010160B90CC004AFA80 /* MenuTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5529B00F160B90CC004AFA80 /* MenuTableViewCell.m */; };
@@ -92,6 +95,12 @@
 		550147E21613AD46003A7A3C /* UIImage+ProportionalFill.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+ProportionalFill.m"; path = "lib/MGImageUtilities/Classes/UIImage+ProportionalFill.m"; sourceTree = "<group>"; };
 		550147E31613AD46003A7A3C /* UIImage+Tint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+Tint.h"; path = "lib/MGImageUtilities/Classes/UIImage+Tint.h"; sourceTree = "<group>"; };
 		550147E41613AD46003A7A3C /* UIImage+Tint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Tint.m"; path = "lib/MGImageUtilities/Classes/UIImage+Tint.m"; sourceTree = "<group>"; };
+		550147E81613B490003A7A3C /* RIButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RIButtonItem.h; path = "lib/UIAlertView-Blocks/RIButtonItem.h"; sourceTree = "<group>"; };
+		550147E91613B490003A7A3C /* RIButtonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RIButtonItem.m; path = "lib/UIAlertView-Blocks/RIButtonItem.m"; sourceTree = "<group>"; };
+		550147EA1613B490003A7A3C /* UIActionSheet+Blocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIActionSheet+Blocks.h"; path = "lib/UIAlertView-Blocks/UIActionSheet+Blocks.h"; sourceTree = "<group>"; };
+		550147EB1613B490003A7A3C /* UIActionSheet+Blocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIActionSheet+Blocks.m"; path = "lib/UIAlertView-Blocks/UIActionSheet+Blocks.m"; sourceTree = "<group>"; };
+		550147EC1613B490003A7A3C /* UIAlertView+Blocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIAlertView+Blocks.h"; path = "lib/UIAlertView-Blocks/UIAlertView+Blocks.h"; sourceTree = "<group>"; };
+		550147ED1613B490003A7A3C /* UIAlertView+Blocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIAlertView+Blocks.m"; path = "lib/UIAlertView-Blocks/UIAlertView+Blocks.m"; sourceTree = "<group>"; };
 		5502390B1612558000FC8903 /* ImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageViewController.h; sourceTree = "<group>"; };
 		5502390C1612558000FC8903 /* ImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageViewController.m; sourceTree = "<group>"; };
 		550239101612643600FC8903 /* TapDetectingWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TapDetectingWindow.h; sourceTree = "<group>"; };
@@ -220,6 +229,19 @@
 				550147E41613AD46003A7A3C /* UIImage+Tint.m */,
 			);
 			name = MGImageUtilities;
+			sourceTree = "<group>";
+		};
+		550147E71613B47D003A7A3C /* UIAlert-Blocks */ = {
+			isa = PBXGroup;
+			children = (
+				550147E81613B490003A7A3C /* RIButtonItem.h */,
+				550147E91613B490003A7A3C /* RIButtonItem.m */,
+				550147EA1613B490003A7A3C /* UIActionSheet+Blocks.h */,
+				550147EB1613B490003A7A3C /* UIActionSheet+Blocks.m */,
+				550147EC1613B490003A7A3C /* UIAlertView+Blocks.h */,
+				550147ED1613B490003A7A3C /* UIAlertView+Blocks.m */,
+			);
+			name = "UIAlert-Blocks";
 			sourceTree = "<group>";
 		};
 		556EBF72160A79CA00CC42E9 = {
@@ -354,6 +376,7 @@
 		55E45D66160A829000D34B6D /* lib */ = {
 			isa = PBXGroup;
 			children = (
+				550147E71613B47D003A7A3C /* UIAlert-Blocks */,
 				550147E01613AD36003A7A3C /* MGImageUtilities */,
 				55BDA735160C461C00DC3655 /* AFNetworking */,
 				55F62C1D160BC834002596A9 /* SVWebViewController */,
@@ -577,6 +600,9 @@
 				550147DF1613A68F003A7A3C /* ImageGroupCell.m in Sources */,
 				550147E51613AD46003A7A3C /* UIImage+ProportionalFill.m in Sources */,
 				550147E61613AD46003A7A3C /* UIImage+Tint.m in Sources */,
+				550147EE1613B490003A7A3C /* RIButtonItem.m in Sources */,
+				550147EF1613B490003A7A3C /* UIActionSheet+Blocks.m in Sources */,
+				550147F01613B490003A7A3C /* UIAlertView+Blocks.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

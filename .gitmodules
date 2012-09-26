@@ -7,3 +7,6 @@
 [submodule "lib/MGImageUtilities"]
 	path = lib/MGImageUtilities
 	url = git://github.com/mattgemmell/MGImageUtilities.git
+[submodule "lib/UIAlertView-Blocks"]
+	path = lib/UIAlertView-Blocks
+	url = git://github.com/jivadevoe/UIAlertView-Blocks.git
