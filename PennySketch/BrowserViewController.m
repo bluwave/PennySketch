@@ -11,9 +11,13 @@
 #import "SVWebViewController.h"
 #import "UIWebView+UIWebView_UrlExtractionUtils.h"
 #import "AFNetworking.h"
+#import "PSUtils.h"
+
+#import <CommonCrypto/CommonDigest.h>
+
 
 @interface BrowserViewController ()
-
+@property(nonatomic, assign) TapDetectingWindow *mWindow;
 @end
 
 @implementation BrowserViewController
@@ -24,6 +28,7 @@
     if (self)
     {
         // Custom initialization
+
     }
     return self;
 }
@@ -31,15 +36,31 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+
+
     self.view.width = PSIsIpad() ? 600 : 150;
     self.view.backgroundColor = [UIColor redColor];
 
-    UILongPressGestureRecognizer *gest = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(handleWebViewTap:)];
+}
 
-    gest.delegate = self;
-    [self.view addGestureRecognizer:gest];
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    _mWindow = (TapDetectingWindow *) [[UIApplication sharedApplication].windows objectAtIndex:0];
+    _mWindow.viewToObserve = [self getWebView];
+    _mWindow.controllerThatObserves = self;
 
+    NSLog(@"%s webView: %@", __func__, [self getWebView]);
 
+}
+
+-(void)viewDidDisappear:(BOOL)animated
+{
+    NSLog(@"%s ",__func__);
+    [super viewDidDisappear:animated];
+    _mWindow.viewToObserve = nil;
+    _mWindow.controllerThatObserves = nil;
+    _mWindow = nil;
 }
 
 - (void)didReceiveMemoryWarning
@@ -49,7 +70,18 @@
 }
 
 
--(UIWebView *) getWebView
+- (SVWebViewController *)svWebViewController
+{
+    if ([self.viewControllers count] > 0)
+    {
+        SVWebViewController *svWebView = [self.viewControllers objectAtIndex:0];
+        return svWebView;
+    }
+    return nil;
+}
+
+
+- (UIWebView *)getWebView
 {
     if ([self.viewControllers count] > 0)
     {
@@ -61,91 +93,95 @@
 }
 
 
-/*- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch
+- (NSString *)convertUrlToFilename:(NSURL *)url
 {
-    if ([gestureRecognizer isKindOfClass:[UILongPressGestureRecognizer class]])
-    {
-        CGPoint touchPoint = [touch locationInView:self.view];
+    const char *cStr = [[url absoluteString] UTF8String];
+    unsigned char result[CC_MD5_DIGEST_LENGTH];
 
-        UIWebView *wv = [self getWebView];
-        if (wv)
-        {
+    CC_MD5(cStr, strlen(cStr), result);
 
-            NSURL *url = [wv urlForImageAtPoint:touchPoint];
-            if (url)
-            {
-                NSLog(@"%s ** should recieve touch",__func__);
-                return YES;
-            }
-
-
-        }
-    }
-    return NO;
-}*/
-
-
--(void) handleWebViewTap:(UITapGestureRecognizer *) g
-{
-    NSLog(@"%s ",__func__);
-
-    CGPoint p =  [g locationInView:self.view];
-    UIWebView * wv = [self getWebView];
-    if(wv)
-    {
-        NSURL *url = [wv urlForImageAtPoint:p];
-        if (url)
-        {
-            NSLog(@"%s url: %@",__func__, url);
-            [self downloadImage:url];
-        }
-        else
-        {
-            NSLog(@"%s ** no image at point",__func__);
-        }
-
-    }
-
-
-
+    return [NSString stringWithFormat:@"%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X",
+                                      result[0], result[1], result[2], result[3], result[4], result[5], result[6], result[7],
+                                      result[8], result[9], result[10], result[11], result[12], result[13], result[14], result[15]];
 }
 
--(void) downloadImage:(NSURL *) url
+
+- (void)downloadImage:(NSURL *)url
 {
 
     @synchronized (self)
     {
 
-    NSURLRequest *req = [NSURLRequest requestWithURL:url];
-    AFImageRequestOperation * op = [AFImageRequestOperation imageRequestOperationWithRequest:req imageProcessingBlock:^UIImage *(UIImage *in)
-    {
-        @try
+        NSURLRequest *req = [NSURLRequest requestWithURL:url];
+        AFImageRequestOperation *op = [AFImageRequestOperation imageRequestOperationWithRequest:req imageProcessingBlock:^UIImage *(UIImage *in)
         {
-            NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-            NSString *documentsDirectory = [paths objectAtIndex:0];
-            NSString *localFilePath = [documentsDirectory stringByAppendingPathComponent:[url lastPathComponent]];
-            NSData *data = UIImagePNGRepresentation(in);
-            [data writeToFile:localFilePath atomically:YES];
+            @try
+            {
 
-        }
-        @catch (NSException * ex)
+                NSError *error = nil;
+
+                [PSUtils createDataDirectory:&error];
+
+                if (error)
+                {
+                    NSLog(@"%s ** error: %@", __func__, [error localizedDescription]);
+                }
+                else
+                {
+                    NSString *ext = [[[[url absoluteURL] path] pathExtension] lowercaseString];
+                    NSString *filename = [NSString stringWithFormat:@"%@.%@", [self convertUrlToFilename:url], @"png"];
+                    NSString *localFilePath = [[PSUtils dataDirectory] stringByAppendingPathComponent:filename];
+                    NSData *data = UIImagePNGRepresentation(in);
+
+                    [data writeToFile:localFilePath atomically:YES];
+                }
+
+            }
+            @catch (NSException *ex)
+            {
+                NSLog(@"%s ex: %@", __func__, [ex description]);
+            }
+            @finally
+            {
+                NSLog(@"%s ** returning", __func__);
+                return in;
+            }
+        }                                                                               success:^(NSURLRequest *req0, NSURLResponse *resp, UIImage *img)
         {
-            NSLog(@"%s ex: %@", __func__, [ex description]);
-        }
-        @finally
+
+        }                                                                               failure:^(NSURLRequest *req1, NSURLResponse *resp, NSError *error)
         {
-            NSLog(@"%s ** returning",__func__);
-            return in;
+            [[[UIAlertView alloc] initWithTitle:nil message:[error localizedDescription] delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
+        }];
+
+        [op start];
+    }
+}
+
+- (void)userDidTapWebView:(id)tapPoint
+{
+
+    NSArray * ptArr = (NSArray *)tapPoint;
+    CGPoint p = CGPointZero;
+    if ([ptArr count] == 2)
+    {
+         p = CGPointMake([ptArr[0] floatValue], [ptArr[1] floatValue]);
+    }
+
+
+    UIWebView *wv = [self getWebView];
+    if (wv)
+    {
+        NSURL *url = [wv urlForImageAtPoint:p];
+        if (url)
+        {
+            [self downloadImage:url];
         }
-    }                                                 success:^(NSURLRequest *req0, NSURLResponse *resp, UIImage *img)
-    {
+        else
+        {
+//            NSLog(@"%s ** no image at point", __func__);
+        }
 
-    }                                                 failure:^(NSURLRequest *req1, NSURLResponse *resp, NSError *error)
-    {
-        [[[UIAlertView alloc] initWithTitle:nil message:[error localizedDescription] delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
-    }];
-
-    [op start];
     }
 }
 

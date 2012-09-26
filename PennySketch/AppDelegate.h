@@ -10,13 +10,14 @@
 
 @class MainViewController;
 @class PSStackedViewController;
+@class TapDetectingWindow;
 
 #define XAppDelegate ((AppDelegate *)[[UIApplication sharedApplication] delegate])
 
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
-@property (strong, nonatomic) UIWindow *window;
+@property (strong, nonatomic) TapDetectingWindow *window;
 
 @property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 @property (readonly, strong, nonatomic) NSManagedObjectModel *managedObjectModel;

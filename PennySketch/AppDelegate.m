@@ -10,6 +10,7 @@
 
 #import "MainViewController.h"
 #import "PSStackedViewController.h"
+#import "TapDetectingWindow.h"
 
 @interface AppDelegate ()
 @property(nonatomic, strong) PSStackedViewController *stackController;
@@ -23,7 +24,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.window = [[TapDetectingWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
 
     MainViewController *menuController = [[MainViewController alloc] init];
     self.stackController = [[PSStackedViewController alloc] initWithRootViewController:menuController];

@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		35E93ABA0A888FE86987FCF3 /* UIImage+OverlayColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 35E938E8FA67A00F3FEEE317 /* UIImage+OverlayColor.m */; };
+		35E93B588FC8AB6D947E7326 /* PSUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 35E9341A107711E676E06B0D /* PSUtils.m */; };
+		550147DF1613A68F003A7A3C /* ImageGroupCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 550147DE1613A68F003A7A3C /* ImageGroupCell.m */; };
+		550147E51613AD46003A7A3C /* UIImage+ProportionalFill.m in Sources */ = {isa = PBXBuildFile; fileRef = 550147E21613AD46003A7A3C /* UIImage+ProportionalFill.m */; };
+		550147E61613AD46003A7A3C /* UIImage+Tint.m in Sources */ = {isa = PBXBuildFile; fileRef = 550147E41613AD46003A7A3C /* UIImage+Tint.m */; };
+		5502390D1612558000FC8903 /* ImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5502390C1612558000FC8903 /* ImageViewController.m */; };
+		550239121612643600FC8903 /* TapDetectingWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 550239111612643600FC8903 /* TapDetectingWindow.m */; };
 		5529B010160B90CC004AFA80 /* MenuTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5529B00F160B90CC004AFA80 /* MenuTableViewCell.m */; };
 		55486F24160C56FA0058806F /* ImageGroupsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55486F23160C56FA0058806F /* ImageGroupsViewController.m */; };
 		556EBF82160A79CA00CC42E9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 556EBF81160A79CA00CC42E9 /* UIKit.framework */; };
@@ -77,7 +83,19 @@
 
 /* Begin PBXFileReference section */
 		35E9302DD85D07CBBAE89BB8 /* UIImage+OverlayColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+OverlayColor.h"; path = "PennySketch/UIImage+OverlayColor.h"; sourceTree = "<group>"; };
+		35E9341A107711E676E06B0D /* PSUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSUtils.m; sourceTree = "<group>"; };
 		35E938E8FA67A00F3FEEE317 /* UIImage+OverlayColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+OverlayColor.m"; path = "PennySketch/UIImage+OverlayColor.m"; sourceTree = "<group>"; };
+		35E93FE011B901A477653A4A /* PSUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSUtils.h; sourceTree = "<group>"; };
+		550147DD1613A68F003A7A3C /* ImageGroupCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageGroupCell.h; sourceTree = "<group>"; };
+		550147DE1613A68F003A7A3C /* ImageGroupCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageGroupCell.m; sourceTree = "<group>"; };
+		550147E11613AD46003A7A3C /* UIImage+ProportionalFill.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+ProportionalFill.h"; path = "lib/MGImageUtilities/Classes/UIImage+ProportionalFill.h"; sourceTree = "<group>"; };
+		550147E21613AD46003A7A3C /* UIImage+ProportionalFill.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+ProportionalFill.m"; path = "lib/MGImageUtilities/Classes/UIImage+ProportionalFill.m"; sourceTree = "<group>"; };
+		550147E31613AD46003A7A3C /* UIImage+Tint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+Tint.h"; path = "lib/MGImageUtilities/Classes/UIImage+Tint.h"; sourceTree = "<group>"; };
+		550147E41613AD46003A7A3C /* UIImage+Tint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Tint.m"; path = "lib/MGImageUtilities/Classes/UIImage+Tint.m"; sourceTree = "<group>"; };
+		5502390B1612558000FC8903 /* ImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageViewController.h; sourceTree = "<group>"; };
+		5502390C1612558000FC8903 /* ImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageViewController.m; sourceTree = "<group>"; };
+		550239101612643600FC8903 /* TapDetectingWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TapDetectingWindow.h; sourceTree = "<group>"; };
+		550239111612643600FC8903 /* TapDetectingWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TapDetectingWindow.m; sourceTree = "<group>"; };
 		5529B00E160B90CC004AFA80 /* MenuTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuTableViewCell.h; sourceTree = "<group>"; };
 		5529B00F160B90CC004AFA80 /* MenuTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuTableViewCell.m; sourceTree = "<group>"; };
 		55486F22160C56FA0058806F /* ImageGroupsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageGroupsViewController.h; sourceTree = "<group>"; };
@@ -193,6 +211,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		550147E01613AD36003A7A3C /* MGImageUtilities */ = {
+			isa = PBXGroup;
+			children = (
+				550147E11613AD46003A7A3C /* UIImage+ProportionalFill.h */,
+				550147E21613AD46003A7A3C /* UIImage+ProportionalFill.m */,
+				550147E31613AD46003A7A3C /* UIImage+Tint.h */,
+				550147E41613AD46003A7A3C /* UIImage+Tint.m */,
+			);
+			name = MGImageUtilities;
+			sourceTree = "<group>";
+		};
 		556EBF72160A79CA00CC42E9 = {
 			isa = PBXGroup;
 			children = (
@@ -231,6 +260,8 @@
 		556EBF89160A79CA00CC42E9 /* PennySketch */ = {
 			isa = PBXGroup;
 			children = (
+				35E93FE011B901A477653A4A /* PSUtils.h */,
+				35E9341A107711E676E06B0D /* PSUtils.m */,
 				5529B00E160B90CC004AFA80 /* MenuTableViewCell.h */,
 				5529B00F160B90CC004AFA80 /* MenuTableViewCell.m */,
 				556EBF92160A79CA00CC42E9 /* AppDelegate.h */,
@@ -250,6 +281,12 @@
 				55F62C2A160BDB64002596A9 /* UIWebView+UIWebView_UrlExtractionUtils.m */,
 				55486F22160C56FA0058806F /* ImageGroupsViewController.h */,
 				55486F23160C56FA0058806F /* ImageGroupsViewController.m */,
+				5502390B1612558000FC8903 /* ImageViewController.h */,
+				5502390C1612558000FC8903 /* ImageViewController.m */,
+				550239101612643600FC8903 /* TapDetectingWindow.h */,
+				550239111612643600FC8903 /* TapDetectingWindow.m */,
+				550147DD1613A68F003A7A3C /* ImageGroupCell.h */,
+				550147DE1613A68F003A7A3C /* ImageGroupCell.m */,
 			);
 			path = PennySketch;
 			sourceTree = "<group>";
@@ -317,6 +354,7 @@
 		55E45D66160A829000D34B6D /* lib */ = {
 			isa = PBXGroup;
 			children = (
+				550147E01613AD36003A7A3C /* MGImageUtilities */,
 				55BDA735160C461C00DC3655 /* AFNetworking */,
 				55F62C1D160BC834002596A9 /* SVWebViewController */,
 				55E45D68160A829500D34B6D /* PSStackedView */,
@@ -533,6 +571,12 @@
 				55BDA750160C461C00DC3655 /* AFXMLRequestOperation.m in Sources */,
 				55BDA751160C461C00DC3655 /* UIImageView+AFNetworking.m in Sources */,
 				55486F24160C56FA0058806F /* ImageGroupsViewController.m in Sources */,
+				35E93B588FC8AB6D947E7326 /* PSUtils.m in Sources */,
+				5502390D1612558000FC8903 /* ImageViewController.m in Sources */,
+				550239121612643600FC8903 /* TapDetectingWindow.m in Sources */,
+				550147DF1613A68F003A7A3C /* ImageGroupCell.m in Sources */,
+				550147E51613AD46003A7A3C /* UIImage+ProportionalFill.m in Sources */,
+				550147E61613AD46003A7A3C /* UIImage+Tint.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -652,10 +696,13 @@
 		556EBFC6160A79CA00CC42E9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Garrett Richards (57Z878G9GW)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PennySketch/PennySketch-Prefix.pch";
 				INFOPLIST_FILE = "PennySketch/PennySketch-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "8EB0384D-A6E0-4337-BD67-D0CA2D52B776";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -666,6 +713,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PennySketch/PennySketch-Prefix.pch";
 				INFOPLIST_FILE = "PennySketch/PennySketch-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

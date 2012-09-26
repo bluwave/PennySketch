@@ -4,3 +4,6 @@
 [submodule "lib/AFNetworking"]
 	path = lib/AFNetworking
 	url = git://github.com/AFNetworking/AFNetworking.git
+[submodule "lib/MGImageUtilities"]
+	path = lib/MGImageUtilities
+	url = git://github.com/mattgemmell/MGImageUtilities.git

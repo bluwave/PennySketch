@@ -12,6 +12,7 @@
 
 - (NSURL *)urlForImageAtPoint:(CGPoint)point
 {
+    NSLog(@"%s using point: %@",__func__, NSStringFromCGPoint(point));
     NSString *imgURL = [NSString stringWithFormat:@"document.elementFromPoint(%f, %f).src", point.x, point.y];
     NSString *urlToSave = [self stringByEvaluatingJavaScriptFromString:imgURL];
 //    NSLog(@"%s url: %@", __func__, urlToSave);

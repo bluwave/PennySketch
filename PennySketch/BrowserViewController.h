@@ -9,10 +9,11 @@
 #import <UIKit/UIKit.h>
 #import "PSStackedViewDelegate.h"
 #import "SVWebViewController.h"
+#import "TapDetectingWindow.h"
 
 @class SVWebViewController;
 
-@interface BrowserViewController : SVModalWebViewController  <PSStackedViewDelegate,UIGestureRecognizerDelegate>
+@interface BrowserViewController : SVModalWebViewController  <PSStackedViewDelegate,UIGestureRecognizerDelegate, TapDetectingWindowDelegate>
 
 
 @end

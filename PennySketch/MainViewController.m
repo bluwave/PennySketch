@@ -15,6 +15,7 @@
 //#import "ExampleViewController2.h"
 #import "UIImage+OverlayColor.h"
 #import "BrowserViewController.h"
+#import "ImageGroupsViewController.h"
 
 #include <QuartzCore/QuartzCore.h>
 
@@ -120,46 +121,25 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {  
-    NSLog(@"%s ",__func__);
 
-    PSStackedViewController *stackController = XAppDelegate.stackController;
-//    UIViewController*viewController = nil;
-//    
-//    
-//    if (indexPath.row < 3) {
-//        // Pop everything off the stack to start a with a fresh app feature
-//        // DISABLED FOR DEBUGGING
-//        //[stackController popToRootViewControllerAnimated:YES];
-//    }
-//    
-    if (indexPath.row == 0) {
-        BrowserViewController * brwsr = [[BrowserViewController alloc] initWithAddress:@"http://www.google.com"];
+    [XAppDelegate.stackController popToRootViewControllerAnimated:YES];
+
+    if (indexPath.row == 0)
+    {
+        ImageGroupsViewController *imageGroupsVC = [[ImageGroupsViewController alloc] init];
+        [XAppDelegate.stackController pushViewController:imageGroupsVC fromViewController:nil animated:YES];
+
+    }
+
+    if (indexPath.row == 1)
+    {
+
+        BrowserViewController *brwsr = [[BrowserViewController alloc] initWithAddress:@"http://www.google.com"];
 //        BrowserViewController * brwsr = [[BrowserViewController alloc] initWithAddress:@"http://abduzeedo.com/cool-illustrated-facial-expressions"];
 
         [XAppDelegate.stackController pushViewController:brwsr fromViewController:nil animated:YES];
 
     }
-//    else if(indexPath.row == 1) {
-//        viewController = [[ExampleViewController2 alloc] initWithStyle:UITableViewStylePlain];     
-//        ((ExampleViewController2 *)viewController).indexNumber = [stackController.viewControllers count];
-//    }else if(indexPath.row == 2) { // Twitter style
-//        viewController = [[ExampleViewController1 alloc] initWithNibName:@"ExampleViewController1" bundle:nil];
-//        ((ExampleViewController1 *)viewController).indexNumber = [stackController.viewControllers count];
-//        viewController.view.width = roundf((self.view.width - stackController.leftInset)/2);
-//    }
-//    else if(indexPath.row == 3) {        
-//        [stackController collapseStack:1 animated:YES];
-//    }else if(indexPath.row == 4) { // right
-//        [stackController expandStack:1 animated:YES];
-//    }else if(indexPath.row == 5) {
-//        while ([stackController.viewControllers count]) {
-//            [stackController popViewControllerAnimated:YES];
-//        }
-//    }
-//    
-//    if (viewController) {
-//        [XAppDelegate.stackController pushViewController:viewController fromViewController:nil animated:YES];
-//    }
 }
 
 /// PSStackedViewDelegate methods
